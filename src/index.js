@@ -1,12 +1,12 @@
 // PLEASE DON'T change function name
 module.exports = function makeExchange(currency) {
-    var changeCounter = 0;
-    var changeObject = {};
+    let changeCounter = 0;
+    let changeObject = {};
     if(currency >= 10000){
         return {error: "You are rich, my friend! We don't have so much coins for exchange"}
     }    
     function countCoins(value,valueName){
-        var coinCounter = 0;
+        let coinCounter = 0;
         while(changeCounter + value <= currency){
             coinCounter++
             changeCounter = changeCounter+=value;         
